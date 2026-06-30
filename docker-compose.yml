@@ -1,13 +1,7 @@
-version: '3.8'
-
 services:
   web_upi:
     build: .
-    image: nginx:alpine
     container_name: contenedor_pagina_upi
     ports:
-      - "8082:80"  # Los estudiantes verán la página entrando a http://<IP_DEL_HOST>:8080
-    volumes:
-      # Enlaza el archivo index.html descargado por Jenkins con la carpeta pública de Nginx
-      - ./index.html:/usr/share/nginx/html/index.html:ro
+      - "8080:80"
     restart: always
